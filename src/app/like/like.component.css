@@ -1,0 +1,11 @@
+.fa-heart {
+    color: #CCC
+}
+
+.isLiked {
+    color: deeppink
+}
+
+.fa-heart:hover{
+    cursor: pointer
+}

@@ -4,9 +4,10 @@
 <app-titlecase></app-titlecase>
 <bootstrap-panel>
     <div class="heading">Head!</div>
-    <div class="body">
+    <ng-container class="body">
         <h2>Body</h2>
         <p>Some content here...</p>
-    </div>
+    </ng-container>
 </bootstrap-panel>
 <!--<authors></authors>-->
+<twitter-like [isLiked]="tweet.isLiked" [likesCount]="tweet.likesCount"></twitter-like>
