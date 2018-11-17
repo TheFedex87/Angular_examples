@@ -6,11 +6,16 @@ import { CoursesService } from './courses.service';
     selector: 'courses',
     template: `
         <h2>{{title}}</h2>
-        <ul>
-            <li *ngFor="let course of courses">
-                {{course}}
-            </li>
-        </ul>
+        <div *ngIf='courses.length > 0 ; else noCourses'>
+            <ul>
+                <li *ngFor="let course of courses">
+                    {{course}}
+                </li>
+            </ul>
+        </div>
+        <ng-template #noCourses>
+            No courses available
+        </ng-template><br>
         <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
         <button class="btn btn-primary" (click)="saveClicked($event)">Save</button>`
 })
